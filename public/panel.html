@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel</title>
+    <link rel="stylesheet" href="./panel.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div id="botStatus" onclick="botStatucAction()">
+            <img src="./img/on.png" alt="ON/OFF">
+        </div>
+
+        <div class="addUser">
+            <input type="text" placeholder="username" autocorrect="off" id="addInp">
+            <button type="button" onclick="addAdmin()">+</button>
+        </div>
+
+        <a id="error"></a>
+
+        <div id="list"></div>
+
+        <div class="row" id="cloneRow">
+            <a class="username"></a>
+            <button type="button" onclick="deleteAdmin(this)">✖</button>
+        </div>
+
+    </div>
+
+    <script src="./panel.js"></script>
+</body>
+</html>

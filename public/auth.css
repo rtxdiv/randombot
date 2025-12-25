@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+.container {
+    margin-top: 200px;
+    width: 88%;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    .title {
+        font-size: 22px;
+        font-weight: 600;
+    }
+    .subtitle {
+        font-size: 18px;
+        color: gray;
+    }
+}
+#authForm {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+
+    input {
+        height: 37px;
+        outline: none;
+        font-size: 16px;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+    input:focus {
+        border: 2px rgb(0, 191, 255) solid;
+    }
+
+    button {
+        margin-top: 10px;
+        height: 37px;
+        font-size: 16px;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+
+    #error {
+        color: red;
+        font-size: 16px;
+        margin-top: 7px;
+    }
+}

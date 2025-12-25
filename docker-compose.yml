@@ -1,0 +1,24 @@
+services:
+  mysql:
+    image: mysql
+    container_name: randombot-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: randombot
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "4001:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    restart: unless-stopped
+    networks:
+      - mysql-network
+
+volumes:
+  mysql_data:
+
+networks:
+  mysql-network:
+    driver: bridge
